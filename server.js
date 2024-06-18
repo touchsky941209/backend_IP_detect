@@ -12,6 +12,6 @@ app.post("/api/test", (req, res) => {
     )    
 })
 
-app.listen(config.port, "estokk.com" ,() => {
+app.listen(config.port, "209.159.150.86" ,() => {
     console.log(`Server is running on ${config.port}`)
 })
