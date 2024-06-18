@@ -12,6 +12,6 @@ app.get("/api/test", (req, res) => {
     )    
 })
 
-app.listen(config.port, () => {
+app.listen(config.port, "estokk.com" ,() => {
     console.log(`Server is running on ${config.port}`)
 })
