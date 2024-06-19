@@ -33,9 +33,36 @@ exports.createTable = async (req, res) => {
 
 exports.setData = async (req, res) => {
     try {
-        await pool.query(query.setData, ["Artist", "Hey",6])
+        await pool.query(query.setData, ["Artist", "Hey", 6])
         res.json({
-            message: "Data is entered."
+            message: "Data is entered!"
+        })
+    } catch (err) {
+        console.log("Error => ", err)
+        res.json({
+            message: "Error => " + err
+        })
+    }
+}
+
+exports.getData = async (req, res) => {
+    try {
+        const result = await pool.query(query.getData)
+        res.json(result.rows)
+
+    } catch (err) {
+        console.log("Error =>", err)
+        res.json({
+            message: "Error => " + err
+        })
+    }
+}
+
+exports.getSpeData = async (req, res) => {
+    try {
+        const result = await pool.query(query.getSpecialData, [2])
+        res.json({
+            result: result.rows
         })
     } catch (err) {
         console.log("Error => ", err)
