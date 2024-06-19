@@ -1,17 +1,10 @@
-const express = require("express")
-const cors = require("cors")
-const app = express()
 const config = require("./config/config")
+const express = require("./master/express")
+const postgreSql = require("./master/postgres")
 
-app.use(cors())
-app.use(express.json())
+const app = express()
+const db = postgreSql()
 
-app.post("/api/test", (req, res) => {
-    res.send(
-        "HELLO"
-    )    
-})
-
-app.listen(config.port, "209.159.150.86" ,() => {
+app.listen(config.port, () => {
     console.log(`Server is running on ${config.port}`)
 })
