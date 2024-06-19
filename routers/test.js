@@ -35,7 +35,7 @@ exports.setData = async (req, res) => {
     try {
         await pool.query(query.setData, ["Artist", "Hey",6])
         res.json({
-            message: "Data is entered."
+            message: "Data is entered!"
         })
     } catch (err) {
         console.log("Error => ", err)
