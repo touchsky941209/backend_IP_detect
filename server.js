@@ -6,5 +6,5 @@ const app = express()
 const db = postgreSql()
 
 app.listen(config.port, () => {
-    console.log(`Server is running on ${config.port}`)
+    console.log(`Server is running  on ${config.port}`)
 })
