@@ -1,7 +1,7 @@
 module.exports = {
-    user:'estokk_user',
+    user:'postgres',
     host:'localhost',
-    database:'estokk_db',
-    password:'vvB06sXTTi8S',
+    database:'postgres',
+    password:'tlkwjdqhd',
     port:5432
 }
